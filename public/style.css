@@ -1,0 +1,23 @@
+body {
+  font-family: Arial;
+  margin: 0;
+  text-align: center;
+}
+
+header {
+  background: black;
+  color: white;
+  padding: 15px;
+}
+
+nav a {
+  margin: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  body {
+    background-color: lightgray;
+  }
+}
