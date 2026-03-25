@@ -23,6 +23,20 @@ nav a {
   margin: 2px 0 8px 0;
 }
 
+/* Project cards */
+.project {
+  background: #f4f4f4;
+  border-left: 4px solid black;
+  margin: 20px auto;
+  padding: 15px 20px;
+  max-width: 600px;
+  text-align: left;
+}
+
+.project h3 {
+  margin-top: 0;
+}
+
 /* Mobile responsiveness */
 @media (max-width: 600px) {
   body {
@@ -34,4 +48,24 @@ nav a {
   nav {
     display: flex;
     flex-direction: column;
-    align​​​​​​​​​​​​​​​​
+    align-items: center;
+    gap: 8px;
+  }
+
+  nav a {
+    display: block;
+    font-size: 1.1rem;
+  }
+
+  input, textarea, button {
+    width: 90%;
+    font-size: 1rem;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
