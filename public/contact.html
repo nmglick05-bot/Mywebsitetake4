@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/script.js" defer></script>
+</head>
+<body>
+
+<header>
+  <h1>My Portfolio</h1>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/projects">Projects</a>
+    <a href="/contact">Contact</a>
+  </nav>
+</header>
+
+<h2>Contact Me</h2>
+
+<form onsubmit="return validateForm()" method="POST" action="/submit">
+  <input type="text" id="name" name="name" placeholder="Name"><br>
+  <input type="email" id="email" name="email" placeholder="Email"><br>
+  <textarea id="message" name="message" placeholder="Message"></textarea><br>
+  <button type="submit">Send</button>
+</form>
+
+<p id="error"></p>
+
+<footer>
+  <p>© 2026 My Website</p>
+</footer>
+
+</body>
+</html>
