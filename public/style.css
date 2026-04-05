@@ -1,71 +1,262 @@
-body {
-  font-family: Arial;
+/* Base */
+* {
+  box-sizing: border-box;
   margin: 0;
-  text-align: center;
+  padding: 0;
 }
 
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Header */
 header {
-  background: black;
+  background: linear-gradient(135deg, #1a73e8, #0d47a1);
   color: white;
-  padding: 15px;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+header h1 {
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+/* Nav */
 nav a {
-  margin: 10px;
+  margin-left: 20px;
   color: white;
   text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s;
 }
 
-/* Error messages for form validation */
-.error {
-  color: red;
-  font-size: 0.85rem;
-  margin: 2px 0 8px 0;
+nav a:hover {
+  color: #a8d1ff;
+}
+
+/* Main content */
+main {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+main h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #1a73e8;
+}
+
+main p {
+  line-height: 1.8;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+/* Button */
+button {
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+button:hover {
+  background-color: #0d47a1;
+  transform: scale(1.05);
 }
 
 /* Project cards */
 .project {
-  background: #f4f4f4;
-  border-left: 4px solid black;
-  margin: 20px auto;
-  padding: 15px 20px;
-  max-width: 600px;
+  background: white;
+  border-left: 5px solid #1a73e8;
+  border-radius: 8px;
+  margin: 20px 0;
+  padding: 20px 25px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   text-align: left;
 }
 
 .project h3 {
-  margin-top: 0;
+  margin-bottom: 8px;
+  color: #0d47a1;
+  font-size: 1.2rem;
 }
 
-/* Mobile responsiveness */
-@media (max-width: 600px) {
-  body {
-    background-color: lightgray;
-    padding: 10px;
-    font-size: 16px;
-  }
+.project p {
+  margin: 0;
+  color: #555;
+}
 
-  nav {
-    display: flex;
+/* Skills cards */
+.skill-card {
+  background: white;
+  border-radius: 8px;
+  margin: 15px 0;
+  padding: 20px 25px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.skill-card i {
+  font-size: 1.8rem;
+  color: #1a73e8;
+  margin-top: 3px;
+}
+
+.skill-card h3 {
+  margin-bottom: 5px;
+  color: #0d47a1;
+}
+
+.skill-card p {
+  margin: 0;
+  color: #555;
+}
+
+/* Form */
+form {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px 14px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #1a73e8;
+}
+
+textarea {
+  height: 130px;
+  resize: vertical;
+}
+
+.error {
+  color: #e53935;
+  font-size: 0.85rem;
+  margin: 2px 0 10px 0;
+}
+
+/* About section */
+.about-intro {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.about-intro img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #1a73e8;
+}
+
+/* Hero section */
+.hero {
+  text-align: center;
+  padding: 30px 0;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto 20px auto;
+}
+
+/* Footer */
+footer {
+  background: #1a73e8;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px;
+  font-size: 0.9rem;
+}
+
+/* 404 page */
+.not-found {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.not-found h2 {
+  font-size: 5rem;
+  color: #1a73e8;
+}
+
+.not-found p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.not-found a {
+  color: #1a73e8;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  header {
     flex-direction: column;
-    align-items: center;
-    gap: 8px;
+    text-align: center;
+    gap: 10px;
   }
 
   nav a {
-    display: block;
-    font-size: 1.1rem;
+    margin: 0 8px;
+    font-size: 0.9rem;
+  }
+
+  main {
+    margin: 30px auto;
+  }
+
+  .about-intro {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   input, textarea, button {
-    width: 90%;
+    width: 100%;
     font-size: 1rem;
-    padding: 10px;
-    box-sizing: border-box;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
   }
 }
